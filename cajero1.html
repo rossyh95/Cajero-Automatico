@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automático</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>¡Bienvenida Mali al Banco DEV.F!</h1>
+    <input type="button" value="Consultar saldo" id="bot1" onclick="">
+    <input type="text" name="Cantidad1" id="C1" value="200">
+    <input type="button" value="Ingresar monto" id="bot2" onclick="formula1()">
+    <input type="button" value="Retirar monto" id="bot3" onclick="formula2()">
+    <input type="text" name="" id="Cant" placeholder="Cantidad">
+
+<script>
+function formula1() {
+    var CantidadT=parseInt(document.getElementById('Cant').value);
+    var Cantidad1=parseInt(document.getElementById('C1').value);
+    document.getElementById('C1').value=(Cantidad1+CantidadT);
+}
+function formula2() {
+    var CantidadT=parseInt(document.getElementById('Cant').value);
+    var Cantidad1=parseInt(document.getElementById('C1').value);
+    document.getElementById('C1').value=(Cantidad1-CantidadT);
+}
+
+var button = document.getElementById('bot1');
+button.onclick = function() {
+    var div = document.getElementById('C1');
+    if(div.style.display !== 'none') {
+        div.style.display = 'none';
+    }
+    else {
+        div.style.display = 'block';
+    }
+}
+
+</script>
+
+</body>
+</html>
